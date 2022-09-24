@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+<table class="table table-dark">
+    <thead>
+    <tr>
+        <th scope="col">id</th>
+        <th scope="col">length</th>
+        <th scope="col">rating</th>
+        <th scope="col">title</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="movie: ${people}">
+        <td th:text="${movie.id}"></td>
+        <td th:text="${movie.length}"></td>
+        <td th:text="${movie.rating}"></td>
+        <td th:text="${movie.title}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
